@@ -10,9 +10,9 @@ public class Hospital {
 		this.employees = employees;
 	}
 
-	public int GetPatientHealth() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getPatientHealth() {
+	
+		return 20;
 	}
 
 	public void patientCare() {
@@ -34,8 +34,8 @@ public class Hospital {
 			if (employee instanceof PatientCareEmployee) {
 				((PatientCareEmployee) employee).care();
 			}
-			if (employee instanceof SecondaryEmployee) {
-				((SecondaryEmployee) employee).task();
+			if (employee instanceof Janitor) {
+				((Janitor) employee).Clean();
 			
 			}
 		}

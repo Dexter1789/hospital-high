@@ -1,47 +1,62 @@
 import java.util.HashMap;
 
-public abstract class Employee {
+public abstract class Employee{
 	
 	private String name;
-	private String position;
-	private int salary;
 	private String idnum;
+	private int patientHealth;
+	private int bloodLevel;
 
 	private HashMap<String, Employee> employeeList = new HashMap<String, Employee>();
 	
-	Employee doctor = new Doctor( "Dr. Jefferson", "Doctor", 90000, "1111");
-	Employee surgeon = new Surgeon("Dr. Smith" , "Surgeon", 120000, "2222");
-	Employee nurse = new Nurse("Bob RN" , "Nurse", 45000, "3333");
-	Employee receptionist = new Receptionist("Doni", "Receptionist", 45000, "4444");
-	Employee janitor = new Janitor("Tony", "Janitor", 40000, "5555");
-	Employee vampireJanitor = new VampireJanitor("Goodman", "VampireJanitor", 40000, "6666");
+	Employee doctor = new Doctor( "Dr. Jefferson", "1111", "Cardiology");
+	Employee surgeon = new Surgeon("Dr. Smith","2222", "Cardiothoracic", false);
+	Employee nurse = new Nurse("Bob RN","3333");
+	Employee receptionist = new Receptionist("Doni", "4444", false);
+	Employee janitor = new Janitor("Tony", "5555", false);
+	Employee vampireJanitor = new VampireJanitor("Goodman", "6666", false, true);
 	
-	public Employee(String name, String position, int salary, String idnum) {
-		this.name = name;		
-		this.position = position;
-		this.salary = salary;
+	public Employee(String name, String idnum) {
+		this.name = name;			
 		this.idnum = idnum;
 	}
 
-	public String getPosition() {
-		return position;
+	public int getPatientHealth() {
+		return patientHealth;
+	}
+	public int getBloodLevel() {
+		return bloodLevel;
+	}
+	public void bloodLevel() {
+		bloodLevel = 20;
+	}
+	public void patientHealth() {
+		patientHealth = 10;
 	}
 
 	public abstract int calculatePay();
 
-	public int getSalary() {
-		return salary;
-	}
 	public String getName() {
 		return name;
 	}
 	public String getId() {
 		return idnum;
 	}
-	@override
+
+	@Override
 	public String toString() {
+		return();
 		
 	}
+	
+	
+
+
+
+	
+
+
+
 
 
 

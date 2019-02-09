@@ -1,9 +1,22 @@
 
 public class Receptionist extends Employee {
+	
+	private Boolean onPhone;
 
-	public Receptionist(String name, String position, int salary, String idnum) {
-		super(name, position, salary, idnum);
-		
+	public Receptionist(String name, String idnum, Boolean onPhone) {
+		super(name, idnum);
+		this.onPhone = false;
+	}
+
+	public void toggleisOnPhone() {
+		this.onPhone = !this.onPhone;
+	}
+	
+@Override
+public int calculatePay() {
+
+	return 45000;
+
 	}
 
 }
