@@ -1,26 +1,28 @@
+import java.util.HashMap;
 
-public class Doctor extends Employees{
+public class Doctor extends Employee{
 
 	
-	private int patientHealth;
-	private int salary;
 	
-	public Doctor(String string, int salary) {
-		this.salary = salary;
+
+	
+	public Doctor(String name, String position, int salary, String idnum) {
+		super(name, position, salary, idnum);
+	
+	}
+
+	public void careForPatient() {
+		
+		// TODO Auto-generated method stub
+		
 	}
 
 
-	public int GetPatientHealth() {
-		
-		return patientHealth;
-	}
+	
 
-	public void patientCare(){
-		
-		
-		
-	}
+
 
 
 
 }
+
