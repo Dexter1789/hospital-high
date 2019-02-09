@@ -3,11 +3,11 @@ import java.util.HashMap;
 public class Hospital {
 
 
+	private HashMap<String, Employee> employees;
 
 
-
-	public Hospital(HashMap<Object, Object> hashMap) {
-		// TODO Auto-generated constructor stub
+	public Hospital(HashMap<String, Employee> employees) {
+		this.employees = employees;
 	}
 
 	public int GetPatientHealth() {
@@ -20,13 +20,24 @@ public class Hospital {
 
 	}
 
-	public void getAllEmployees() {
+	public HashMap<String, Employee>getAllEmployees() {
+		return employees;
 	
 
 	}
 
-	public void getAllPatients() {
-
+//	public void getAllPatients() {
+//
+//	}
+	public void workAllEmployees() {
+		for(Employee employee : getAllEmployees().values()) {
+			if (employee instanceof PatientCareEmployee) {
+				((PatientCareEmployee) employee).care();
+			}
+			if (employee instanceof SecondaryEmployee) {
+				((SecondaryEmployee) employee).task();
+			
+			}
+		}
 	}
-
 }

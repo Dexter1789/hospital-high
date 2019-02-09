@@ -27,15 +27,21 @@ public abstract class Employee {
 		return position;
 	}
 
-	public int calculatePay(){
-		return getSalary();		
-	}
+	public abstract int calculatePay();
 
 	public int getSalary() {
 		return salary;
 	}
-
-
+	public String getName() {
+		return name;
+	}
+	public String getId() {
+		return idnum;
+	}
+	@override
+	public String toString() {
+		
+	}
 
 
 
