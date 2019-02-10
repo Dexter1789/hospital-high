@@ -6,10 +6,10 @@ public class Patient{
 	
 	private String patientName;
 	
-	private int health;
-	private int bloodLevel;
+	public int health;
+	public int bloodLevel;
 
-	private HashMap<String, Patient> patientList = new HashMap<String, Patient>();
+//	private HashMap<String, Patient> patientList = new HashMap<String, Patient>();
 
 	public Patient(String patientName, int health, int bloodLevel) {
 		this.patientName = patientName;
@@ -34,15 +34,31 @@ public class Patient{
 	public int getBloodLevel() {
 		return bloodLevel;
 	}
-
+	public void bloodLevel(int bloodLevel) {
+		this.bloodLevel = bloodLevel;
+	}
+	public void health(int health) {
+		this.health = health;
+	}
 
 	public void addPatient(Patient patient) {
 		
 	}
 
+	public void increasesHealthByOne() {
+		this.health +=1;
+	}
+	public void decreasesHealthByOne() {
+		this.health -=1;
+	}
+	public void increasesBloodLevelByTwo() {
+		this.bloodLevel +=2;
+	}
+	public void decreasesBloodLevelByTwo() {
+		this.bloodLevel -=2;
+	}
 
-
-	public String getName() {
+	public String getPatientName() {
 		// TODO Auto-generated method stub
 		return patientName;
 	}

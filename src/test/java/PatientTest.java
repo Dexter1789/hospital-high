@@ -9,16 +9,25 @@ public class PatientTest {
 	
 	@Before
 	public void setup() {
-		underTest = new Patient("Bob", 50, 100);
+		underTest = new Patient("Bob", 10, 20);
 		
 	}
 
 	@Test
 	public void shouldGetHealth() {
-		underTest.getHealth();
+		int expected = underTest.getHealth();
+		assertEquals(expected, 10);
 	
 	}
 	@Test
-	public void shouldbe
+	public void patientShouldHaveName() {
+		String expected = underTest.getPatientName();
+		assertEquals(expected, "Bob");
+	}
+	@Test
+	public void shouldGetBloodLevel() {
+		int expected = underTest.getBloodLevel();
+		assertEquals(expected, 20);
+	}
 	
 }

@@ -1,13 +1,9 @@
-import java.util.HashMap;
+
 
 public abstract class Employee {
 	
 	private String name;
 	private String idnum;
-	public int patientHealth;
-	public int bloodLevel;
-
-	private HashMap<String, Employee> employeeList = new HashMap<String, Employee>();
 	
 	
 	
@@ -18,12 +14,7 @@ public abstract class Employee {
 	
 
 
-	public void bloodLevel() {
-		bloodLevel = 20;
-	}
-	public void patientHealth() {
-		patientHealth = 10;
-	}
+	
 
 	public abstract int calculatePay();
 
@@ -42,10 +33,10 @@ public abstract class Employee {
 
 
 
-	public void addEmployee(Employee doctor) {
-		// TODO Auto-generated method stub
-		
-	}
+//	public void addEmployee(Employee doctor) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 	
 	
 

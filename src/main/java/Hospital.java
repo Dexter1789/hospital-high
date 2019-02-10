@@ -4,10 +4,11 @@ import java.util.HashMap;
 
 public class Hospital {
 	
-	
-	public int patientHealth;
-	public int bloodLevel;
-	
+//	
+//	public int patientHealth;
+//	public int bloodLevel;
+	private int allEmployees;
+	private int allPatients;
 	
 
 
@@ -30,10 +31,7 @@ public class Hospital {
 	
 
 	
-	public void patientCare() {
-		// TODO Auto-generated method stub
 
-	}
 
 
 
@@ -41,8 +39,35 @@ public class Hospital {
 		employees.put(employeeToAdd.getName(), employeeToAdd);
 	}
 	public void addPatient(Patient patientToAdd) {
-		patients.put(patientToAdd.getName(), patientToAdd);
+		patients.put(patientToAdd.getPatientName(), patientToAdd);
 	}
+	
+	public void removeEmployee(String name) {
+		employees.remove(name);
+
+	}
+	public void removePatient(String patientName) {
+		patients.remove(patientName);
+
+	}
+	
+	public void listAllPatients() {
+		
+	}
+	public void patientStats() {
+		
+	}
+	public void patientCare() {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 //	public void getAllPatients() {
 //
 //	}
@@ -57,5 +82,20 @@ public class Hospital {
 //			}
 //		}
 //	}
+
+	public int getEmployeesLength() {
+		// TODO Auto-generated method stub
+		return employees.size();
+	}
+
+	public int getPatientsLength() {
+		// TODO Auto-generated method stub
+		return patients.size();
+	}
+
+	public void removeEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

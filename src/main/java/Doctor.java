@@ -1,6 +1,6 @@
 
 
-public class Doctor extends Employee{
+public class Doctor extends Employee implements CareForPatient, BloodDraw{
 
 	private String specialty;
 	
@@ -8,18 +8,14 @@ public class Doctor extends Employee{
 		super(name, idnum);
 		this.specialty = specialty;
 	}
-	public int getPatientHealth() {
-		return patientHealth;
+	@Override
+	public void careForPatient(Patient patient) {
+		patient.increasesBloodLevelByTwo();
+		patient.increasesHealthByOne();
 	}
-	public int getBloodLevel() {
-		return bloodLevel;
-	}
-	public void careForPatient() {
-		patientHealth += 10;
-		bloodLevel += 10;
-	}
-	public void drawBlood() {
-		bloodLevel -= 10;
+	@Override
+	public void bloodDraw(Patient patient) {
+		patient.decreasesBloodLevelByTwo();
 	}
 	public String getSpecialty() {
 		return specialty;

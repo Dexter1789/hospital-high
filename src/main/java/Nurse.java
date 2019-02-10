@@ -1,5 +1,5 @@
 
-public class Nurse extends Employee {
+public class Nurse extends Employee implements BloodDraw, CareForPatient {
 	
 	
 
@@ -7,17 +7,15 @@ public class Nurse extends Employee {
 		super(name, idnum);
 		
 	}
-	public int getPatientHealth() {
-		return patientHealth;
+
+	@Override
+	public void careForPatient(Patient patient) {
+		patient.increasesBloodLevelByTwo();
+		patient.increasesHealthByOne();
 	}
-	public int getBloodLevel() {
-		return bloodLevel;
-	}
-	public void careForPatient() {
-		this.patientHealth += 2;
-	}
-	public void drawBlood() {
-		this.bloodLevel += 5;
+	@Override
+	public void bloodDraw(Patient patient) {
+		patient.decreasesBloodLevelByTwo();
 }
 	@Override
 	public int calculatePay() {

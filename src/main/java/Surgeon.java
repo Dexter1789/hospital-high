@@ -1,6 +1,7 @@
 
-public class Surgeon extends Employee {
+public class Surgeon extends Employee implements BloodDraw,  CareForPatient{
 
+	
 	private Boolean isOperating;
 	private String specialty;
 	
@@ -10,27 +11,23 @@ public class Surgeon extends Employee {
 		this.isOperating = false;
 	}
 	
-	public int getPatientHealth() {
-		return patientHealth;
-	}
+
 	
-	public int getBloodLevel() {
-		return bloodLevel;
+	public void toggleOperating(Patient patient) {
+		this.isOperating = !this.isOperating;		
 	}
-	
-	public void toggleOperating() {
-		if(this.isOperating = !this.isOperating) {
-			patientHealth += 20;
-			bloodLevel -= 10;
-		} else {
-			this.isOperating = this.isOperating;
-		}
+		
+	public Boolean isOperating() {
+		return isOperating;
 	}
 
-	public void careForPatient() {
+	
+	@Override
+	public void careForPatient(Patient patient) {
+		patient.increasesBloodLevelByTwo();
+		patient.increasesHealthByOne();
 		
 	
-		
 	}
 	public String getSpecialty() {
 		return specialty;
@@ -39,5 +36,17 @@ public class Surgeon extends Employee {
 	public int calculatePay() {
 		
 		return 120000;
+	}
+
+
+
+	
+
+
+
+	@Override
+	public void bloodDraw(Patient patient) {
+	patient.decreasesBloodLevelByTwo();
+		
 	}
 }
