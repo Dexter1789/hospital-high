@@ -3,8 +3,7 @@ public class VampireJanitor extends Employee {
 
 	private Boolean isSweeping;
 	private Boolean isSuckingBlood;
-	private int patientHealth;
-	private int bloodLevel;
+
 
 	public VampireJanitor(String name, String idnum, Boolean isSweeping, Boolean isSuckingBlood) {
 		super(name, idnum);

@@ -1,19 +1,14 @@
-import java.util.HashMap;
+
 
 public class Doctor extends Employee{
 
 	private String specialty;
-	private int patientHealth;
-	private int bloodLevel;
-	
-
 	
 	public Doctor(String name, String idnum, String specialty) {
 		super(name, idnum);
 		this.specialty = specialty;
 	}
 	public int getPatientHealth() {
-		
 		return patientHealth;
 	}
 	public int getBloodLevel() {

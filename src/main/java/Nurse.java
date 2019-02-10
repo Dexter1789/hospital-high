@@ -1,8 +1,7 @@
 
 public class Nurse extends Employee {
 	
-	private int patientHealth;
-	private int bloodLevel;
+	
 
 	public Nurse(String name, String idnum) {
 		super(name, idnum);

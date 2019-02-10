@@ -3,8 +3,6 @@ public class Surgeon extends Employee {
 
 	private Boolean isOperating;
 	private String specialty;
-	private int patientHealth;
-	private int bloodLevel;
 	
 	public Surgeon(String name, String idnum, String specialty, Boolean isOperating) {
 		super(name, idnum);

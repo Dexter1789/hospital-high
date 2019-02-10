@@ -2,30 +2,27 @@ import java.util.HashMap;
 
 
 
-public abstract class Patient {
-
-	private HashMap<String, Patient> patientList = new HashMap<String, Patient>();
-	public Patient(HashMap<Object, Object> hashMap) {
+public class Patient{
 	
-		// TODO Auto-generated constructor stub
-	}
-
-	public Patient(String string, int i, int j) {
-		// TODO Auto-generated constructor stub
-	}
-
+	private String patientName;
+	
 	private int health;
 	private int bloodLevel;
+
+	private HashMap<String, Patient> patientList = new HashMap<String, Patient>();
+
+	public Patient(String patientName, int health, int bloodLevel) {
+		this.patientName = patientName;
+		
+		this.health = 10;
+		this.bloodLevel = 20;
+
 	
-	
-
-
-
-	public void Patient(String string, int health, int bloodLevel) {
-		this.health = 50;
-		this.bloodLevel = 100;
-		// TODO Auto-generated constructor stub
 	}
+	
+
+
+
 
 
 
@@ -36,6 +33,18 @@ public abstract class Patient {
 
 	public int getBloodLevel() {
 		return bloodLevel;
+	}
+
+
+	public void addPatient(Patient patient) {
+		
+	}
+
+
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return patientName;
 	}
 
 }
