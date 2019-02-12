@@ -63,4 +63,15 @@ public class Patient{
 		return patientName;
 	}
 
+
+
+
+
+
+
+	public void stats() {
+		System.out.println("Patient Name: " + patientName + "\nPatient Health: " + health + "\nBlood Level " + bloodLevel +"\n");
+		
+	}
+
 }

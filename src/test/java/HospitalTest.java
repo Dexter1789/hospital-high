@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 
 import java.util.HashMap;
@@ -7,23 +6,20 @@ import java.util.HashMap;
 import org.junit.Before;
 import org.junit.Test;
 
-
-
 public class HospitalTest {
-	
-	
+
 	Hospital underTest;
 	Employee doctor;
 	Employee surgeon;
 	Patient patient1;
 	Patient patient2;
-	
+
 	@Before
 	public void setup() {
 		underTest = new Hospital();
-		doctor = new Doctor("Steve","1111","Heart");
+		doctor = new Doctor("Steve", "1111", "Heart");
 		surgeon = new Surgeon("Bill", "2222", "Leg", false);
-		patient1 = new Patient("Megan", 10,10);
+		patient1 = new Patient("Megan", 10, 10);
 		patient2 = new Patient("Tim", 10, 10);
 	}
 
@@ -35,9 +31,10 @@ public class HospitalTest {
 		underTest.addPatient(patient1);
 		int afterEmployees = underTest.getEmployeesLength();
 		int afterPatients = underTest.getPatientsLength();
-		assertEquals(initialEmployees + 1 , afterEmployees);
-		assertEquals(initialPatients +1, afterPatients);
+		assertEquals(initialEmployees + 1, afterEmployees);
+		assertEquals(initialPatients + 1, afterPatients);
 	}
+
 	@Test
 	public void shouldRemovePatientsAndEmployeesToHospital() {
 		underTest.addEmployee(doctor);
@@ -48,8 +45,8 @@ public class HospitalTest {
 		underTest.removePatient("Megan");
 		int afterEmployees = underTest.getEmployeesLength();
 		int afterPatients = underTest.getPatientsLength();
-		assertEquals(initialEmployees - 1 , afterEmployees);
+		assertEquals(initialEmployees - 1, afterEmployees);
 		assertEquals(initialPatients - 1, afterPatients);
 	}
-	
+
 }

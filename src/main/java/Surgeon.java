@@ -5,8 +5,8 @@ public class Surgeon extends Employee implements BloodDraw,  CareForPatient{
 	private Boolean isOperating;
 	private String specialty;
 	
-	public Surgeon(String name, String idnum, String specialty, Boolean isOperating) {
-		super(name, idnum);
+	public Surgeon(String name, String idnum, String position, String specialty, Boolean isOperating) {
+		super(name, idnum, position);
 		this.specialty = specialty;
 		this.isOperating = false;
 	}
@@ -38,7 +38,11 @@ public class Surgeon extends Employee implements BloodDraw,  CareForPatient{
 		return 120000;
 	}
 
-
+	public void stats() {
+		super.stats();
+	
+		System.out.println("Specialty: " + specialty + "\nCurrently Operating: " + isOperating + "\n");
+	}
 
 	
 

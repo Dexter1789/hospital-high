@@ -4,8 +4,8 @@ public class Receptionist extends Employee {
 	private Boolean onPhone;
 	
 
-	public Receptionist(String name, String idnum, Boolean onPhone) {
-		super(name, idnum);
+	public Receptionist(String name, String idnum, String position, Boolean onPhone) {
+		super(name, idnum, position);
 		this.onPhone = false;
 	}
 
@@ -24,7 +24,11 @@ public int calculatePay() {
 
 	}
 
+public void stats() {
+	super.stats();
 
+	System.out.println("Current Call Status: " + onPhone + "\n");
+}
 
 
 }

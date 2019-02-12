@@ -1,15 +1,19 @@
 
-public class VampireJanitor extends Janitor implements BloodDraw {
+public class VampireJanitor extends Janitor implements BloodDraw, Sweeping {
 
 
 
+	private Boolean isSweeping;
 
+	public VampireJanitor(String name, String idnum, String position, Boolean isSweeping) {
+		super(name, idnum, position, isSweeping);
 
-	public VampireJanitor(String name, String idnum, Boolean isSweeping) {
-		super(name, idnum, isSweeping);
 		
 	}
-
+	@Override
+	public void toggleisSweeping() {
+		this.setIsSweeping(!this.getIsSweeping());
+	}
 
 
 	@Override
@@ -23,4 +27,9 @@ public class VampireJanitor extends Janitor implements BloodDraw {
 		
 	}
 	
+	public void stats() {
+		super.stats();
+	
+		System.out.println("Currently Sweeping: " + isSweeping + "\n");
+	}
 }

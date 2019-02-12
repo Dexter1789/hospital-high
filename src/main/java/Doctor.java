@@ -4,8 +4,8 @@ public class Doctor extends Employee implements CareForPatient, BloodDraw{
 
 	private String specialty;
 	
-	public Doctor(String name, String idnum, String specialty) {
-		super(name, idnum);
+	public Doctor(String name, String idnum, String position, String specialty) {
+		super(name, idnum, position);
 		this.specialty = specialty;
 	}
 	@Override
@@ -26,8 +26,11 @@ public class Doctor extends Employee implements CareForPatient, BloodDraw{
 	
 		return 90000;
 	}
-
-
+	public void stats() {
+		super.stats();
+	
+		System.out.println("Specialty: " + specialty + "\n");
+	}
 
 
 	

@@ -1,19 +1,19 @@
 
-public class Janitor extends Employee {
+public class Janitor extends Employee implements Sweeping{
 	
 	private Boolean isSweeping;
 	
-	public Janitor(String name, String idnum, Boolean isSweeping) {
-		super(name, idnum);
-		this.isSweeping = false;
+	public Janitor(String name, String idnum, String position, Boolean isSweeping) {
+		super(name, idnum, position);
+		
 	
 	}
 	public Boolean getIsSweeping() {
 		return isSweeping;
 	}
-
+	@Override
 	public void toggleisSweeping() {
-		this.isSweeping =!this.isSweeping;
+		this.setIsSweeping(!this.getIsSweeping());
 	}
 
 
@@ -23,5 +23,16 @@ public class Janitor extends Employee {
 		return 40000;
 	}
 
-
+	@Override
+	public String toString() {
+		return("");
+	}
+	public void stats() {
+		super.stats();
+	
+		System.out.println("Currently Sweeping: " + isSweeping + "\n");
+	}
+	public void setIsSweeping(Boolean isSweeping) {
+		this.isSweeping = isSweeping;
+	}
 }

@@ -4,10 +4,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class NurseTest {
-	
+
 	Employee underTest;
 	Patient patientUnderTest;
-	
+
 	@Before
 	public void setup() {
 		underTest = new Nurse("Jackie", "2222");
