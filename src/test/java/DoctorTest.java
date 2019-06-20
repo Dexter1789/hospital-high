@@ -12,7 +12,7 @@ public class DoctorTest {
 	
 	@Before
 	public void setup() {
-	 underTest =  new Doctor("Dr. Phillips", "2222", "Heart");
+	 underTest =  new Doctor("Dr. Phillips", "2222", "Heart", "Heart");
 	 patientUnderTest = new Patient("Dave", 10, 20);
 }
 

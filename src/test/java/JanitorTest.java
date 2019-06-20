@@ -9,7 +9,7 @@ public class JanitorTest {
 	
 	@Before
 	public void setup() {
-	 underTest = new Janitor("Ted", "5555", false);
+	 underTest = new Janitor("Ted", "5555", "janitor", false);
 	}
 	@Test
 	public void shouldSweep() {

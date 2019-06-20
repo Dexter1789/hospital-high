@@ -17,8 +17,8 @@ public class HospitalTest {
 	@Before
 	public void setup() {
 		underTest = new Hospital();
-		doctor = new Doctor("Steve", "1111", "Heart");
-		surgeon = new Surgeon("Bill", "2222", "Leg", false);
+		doctor = new Doctor("Steve", "1111", "Heart", "Heart");
+		surgeon = new Surgeon("Bill", "2222", "Leg", "Heart", false);
 		patient1 = new Patient("Megan", 10, 10);
 		patient2 = new Patient("Tim", 10, 10);
 	}

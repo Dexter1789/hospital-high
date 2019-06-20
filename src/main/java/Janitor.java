@@ -13,7 +13,7 @@ public class Janitor extends Employee implements Sweeping{
 	}
 	@Override
 	public void toggleisSweeping() {
-		this.setIsSweeping(!this.getIsSweeping());
+		this.isSweeping = !this.isSweeping;
 	}
 
 

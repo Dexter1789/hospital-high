@@ -9,7 +9,7 @@ public class EmployeeTest {
 	
 	@Before
 	public void setup() {
-		underTest = new Doctor("Jeff", "1111", "Brain");
+		underTest = new Doctor("Jeff", "1111", "Brain", null);
 		
 	}
 	

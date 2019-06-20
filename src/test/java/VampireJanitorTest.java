@@ -10,7 +10,7 @@ public class VampireJanitorTest {
 	
 	@Before
 	public void setup() {
-		underTest = new VampireJanitor("Ted", "", false);
+		underTest = new VampireJanitor("Ted", "", "", false);
 		patientUnderTest = new Patient("Bill", 10, 20);
 	}
 
